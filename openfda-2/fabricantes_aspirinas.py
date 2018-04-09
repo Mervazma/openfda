@@ -20,8 +20,10 @@ response = conection.getresponse()
 aspirin= response.read().decode("utf-8")
 
 conection.close()
+
 #Leo el contenido json
-aspirins = json.loads(aspirin)['results']
+aspirin_json = json.loads(aspirin)
+aspirins = aspirin_json['results']
 
 print("\nNOMBRES Y ID'S DE TODOS LOS FABRICANTES QUE PRODUCEN ASPIRINAS:\n")
 
